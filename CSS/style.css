@@ -1,0 +1,242 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 
+Theme Name: Typewriter Theme
+Author: Mads Andersen
+Author URI: http://mediabymads.dk/
+Description: This theme is the very first theme of Mads Andersen
+Version: 0.2 
+*/
+
+* {box-sizing: border-box;}
+
+:root {
+    /* BACKGROUNDS */
+    --body-background: rgb(250,250,250);
+    --main-background: rgb(235, 235, 235);
+
+    /* TEXT COLORS, TRANSITIONS, ALIGNMENT etc. */
+    --text-color: rgb(0, 0, 0);
+    --text-orange: rgb(234,120,36);
+    --text-blue: rgb(0,158,219);
+    --text-green: rgb(180,190,53);
+    --text-purple: rgb(193,64,150);
+    --link-hover: rgb(234,120,36);
+    --text-transition: 0.5s;
+    --text-alignment: right;
+
+    /* DOCUMENT DIMENSIONS */
+    --main-width: 80%;
+    --inner-width: 66%;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--body-background);
+    margin: 0;
+    color: var(--text-color);
+}
+
+main {
+    background-color: var(--main-background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* min-height: 1000px; */
+    margin: 2em;
+    padding: 1em 0 5em;
+}
+
+/* GENERAL STYLINGS */
+    /* Anchors */
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+a:hover {
+    color: var(--link-hover);
+    transition: var(--text-transition);
+}
+
+    /* Basic layout */
+.basic-layout {
+    width: var(--main-width);
+    max-width: 1100px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+    /* Emphasis */
+em {
+    color: var(--text-orange);
+    font-style: normal;
+}
+
+em.blue {
+    color: var(--text-blue);
+}
+
+em.green {
+    color: var(--text-green);
+}
+
+em.purple {
+    color: var(--text-purple);
+}
+
+em:hover {
+    color: var(--text-color);
+    transition: var(--text-transition);
+}
+
+    /* Horisontal lines */
+hr {
+    width: var(--main-width);
+    padding: 0;
+    border: dashed black 1px;
+}
+
+hr.alt-line {
+    width: 100%;
+}
+
+    /* Home page layout */
+.home-content {
+    display: flex;
+}
+
+.introduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* End of general stylings */
+
+/* Header */
+header {
+    display: flex;
+    justify-content: center;
+}
+
+header .contact {
+    display: flex;
+    align-items: center;
+}
+
+header .contact > * {
+    margin: 1em 0.5em 0;
+}
+
+/* Navbar */
+.menu {
+    width: var(--inner-width);
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 0;
+}
+
+.menu ul li {
+    width: 33%;
+    display: flex;
+    justify-content: center;
+}
+
+.menu ul li > a {
+    font-size: 2em;
+
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+footer .contact {
+    display: flex;
+    align-items: center;
+}
+
+footer .contact > * {
+    margin: 1em 0.5em 0;
+}
+
+/* Home page */
+.title {
+    width: 100%;
+    text-align: var(--text-alignment);
+    margin-top: 0;
+}
+
+.title p {
+    margin: 0 0 1em;
+}
+
+img {
+    margin: 2em 0;
+}
+
+.textbox {
+    width: 100%;
+    font-size: 1.3em;
+    text-align: var(--text-alignment);
+}
+
+/* Case studies layout */
+.case-study-layout {
+    width: var(--main-width);
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.case-study-layout .title {
+    width: var(--inner-width);
+    text-align: center;
+    margin: 1em 0 0;
+}
+
+.case-study-layout .title > h1 {
+    margin: 0;
+}
+
+    /* Case study keywords*/
+.case-study-layout .keyword-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.case-study-layout .keyword-container > h4 {
+    margin: 1em 0 0;
+}
+
+.case-study-layout .keyword-container .keywords {
+    display: flex;
+    justify-content: center;
+}
+
+.case-study-layout .keyword-container .keywords > h4 {
+    margin: 0 1em 1em;
+}
+
+    /* Case study description */
+.case-study-layout .description {
+    width: var(--inner-width);
+}
+
+.case-study-layout .wp-block-image {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
